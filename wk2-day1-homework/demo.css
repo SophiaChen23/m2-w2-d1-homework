@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background: url(images/central_park.jpg) 0 -200px no-repeat; /* place image as background */
+  background: url(images/central_park.jpg) center -200px no-repeat; /* place image as background */
   background-size: cover;
   height: 400px; /* give header some height to display the background image */
   padding-top: 100px;
@@ -70,5 +70,27 @@ footer {
   header {
     background-position: center;
     padding: 50px;
+  }
+
+  main .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .card {
+    margin-bottom: 20px;
+  }
+
+  main .card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }
